@@ -17,12 +17,14 @@ const port=process.env.PORT || 4000;
 await connectDB()
 await connectCloudinary()
 
-// const allowedOrigins=['http://localhost:5173, https://instadelivery.vercel.app']
+const allowedOrigins=['http://localhost:5173, https://instadelivery.vercel.app']
 //middleware configurations
 
 app.use(express.json());            
 app.use(cookieParser());            
-app.use(cors());            
+app.use(cors({
+    origin : allowedOrigins
+}));            
 app.get("/", (req,res)=>res.send("API is working"))
 app.use ('/api/user', userRouter)
 app.use ('/api/seller', sellerRouter)
