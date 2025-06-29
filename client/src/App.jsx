@@ -7,7 +7,7 @@ import {Toaster} from "react-hot-toast"
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import AllProducts from "./pages/AllProducts"; 
-import ProductCategory from "./pages/Productcategory";
+import ProductCategory from "./pages/ProductCategory";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import AddAddress from "./pages/AddAddress";
